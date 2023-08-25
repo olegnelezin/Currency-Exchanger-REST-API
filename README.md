@@ -75,15 +75,15 @@ REST API для описания валют и обменных курсов. П
     {
         "id": 1,
         "baseCurrency": {
+            "code": "USD",
             "id": 1,
             "name": "United States dollar",
-            "code": "USD",
             "sign": "$"
         },
         "targetCurrency": {
             "id": 2,
-            "name": "Euro",
             "code": "EUR",
+            "name": "Euro",
             "sign": "€"
         },
         "rate": 0.98
