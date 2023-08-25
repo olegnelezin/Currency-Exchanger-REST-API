@@ -1,0 +1,79 @@
+{
+	"info": {
+		"_postman_id": "f9ed0132-63c2-46c7-9a87-87fbca36bbe8",
+		"name": "For CurrencyExchanger",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "28905055"
+	},
+	"item": [
+		{
+			"name": "/currencies",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/currencies"
+			},
+			"response": []
+		},
+		{
+			"name": "/exchangeRate",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/exchangeRates"
+			},
+			"response": []
+		},
+		{
+			"name": "/currency/rub",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/currency/rub"
+			},
+			"response": []
+		},
+		{
+			"name": "/exchangeRate/usduah",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/exchangeRate/usduah"
+			},
+			"response": []
+		},
+		{
+			"name": "/exhange?",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/exchange?from=usd&to=rub&amount=10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"exchange"
+					],
+					"query": [
+						{
+							"key": "from",
+							"value": "usd"
+						},
+						{
+							"key": "to",
+							"value": "rub"
+						},
+						{
+							"key": "amount",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
