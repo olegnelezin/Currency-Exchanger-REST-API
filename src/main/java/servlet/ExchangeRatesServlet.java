@@ -30,7 +30,6 @@ public class ExchangeRatesServlet extends HttpServlet {
     // GET: Получение всех обменных курсов валют из базы ExchangeRate
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-        resp.setContentType("application/json; charset=UTF-8");
         new ObjectMapper().writeValue(resp.getWriter(), exchangeRatesDatabase.getAllExchangeRates());
         validator = new Validator(exchangeRatesDatabase);
     }

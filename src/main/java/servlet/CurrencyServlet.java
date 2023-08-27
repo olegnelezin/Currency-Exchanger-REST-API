@@ -37,7 +37,6 @@ public class CurrencyServlet extends HttpServlet {
         }
 
         if (validator.isCurrencyValid(currencyCode, resp)) {
-            resp.setContentType("application/json; charset=UTF-8");
             new ObjectMapper().writeValue(resp.getWriter(), currenciesDatabase.findByCode(currencyCode));
         }
     }

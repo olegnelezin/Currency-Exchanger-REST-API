@@ -33,7 +33,6 @@ public class ExchangeServlet extends HttpServlet {
         String amount = req.getParameter("amount");
 
         if (validator.isCurrenciesValid(from, to, resp)){
-            resp.setContentType("application/json; charset=UTF-8");
             ExchangeRate exchangeRate = exchangeRatesDatabase.findByCodes(from, to);
 
             Exchange exchange = convert(exchangeRate, amount);

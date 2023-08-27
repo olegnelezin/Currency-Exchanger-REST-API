@@ -45,7 +45,6 @@ public class ExchangeRateServlet extends HttpServlet {
         String targetCurrency = line.substring(3, 6);
 
         if (validator.isCurrenciesValid(baseCurrency, targetCurrency, resp)) {
-            resp.setContentType("application/json; charset=UTF-8");
             ExchangeRate exchangeRate = exchangeRatesDatabase.findByCodes(baseCurrency, targetCurrency);
             exchangeRate.setBaseCurrency(currenciesDatabase.findByCode(baseCurrency));
             exchangeRate.setTargetCurrency(currenciesDatabase.findByCode(targetCurrency));
