@@ -36,12 +36,10 @@ public class CurrenciesServlet extends HttpServlet {
         String name = req.getParameter("name");
         String sign = req.getParameter("sign");
 
-        if (validator.isCurrencyNotExists(code, resp)) {
-            Currency currency = new Currency(code, name, sign);
-            currenciesDatabase.insertRecord(currency);
+        Currency currency = new Currency(code, name, sign);
+        currenciesDatabase.insertRecord(currency);
+        doGet(req, resp);
 
-            doGet(req, resp);
-        }
 
 
     }

@@ -52,17 +52,6 @@ public class Validator {
         return isFind;
     }
 
-    // Проверка на существование валюты в базе Currencies
-    public boolean isCurrencyNotExists(String code, HttpServletResponse resp) throws IOException {
-        boolean isNotExists = false;
-        if (currenciesDatabase.findByCode(code) != null) {
-            isNotExists = true;
-        } else {
-            resp.sendError(HttpServletResponse.SC_CONFLICT, "Введённые данные уже существуют");
-        }
-        return isNotExists;
-    }
-
     // Проверка на существование валюты в базе ExchangeRate
     public boolean isExchangeRateNotExists(int baseCurrencyId, int targetCurrencyId, HttpServletResponse resp) throws IOException {
         boolean isNotExist = false;
